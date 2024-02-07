@@ -102,7 +102,8 @@ document.addEventListener("keydown", (event) => {
     PressBack = 7;
   }
   if (event.keyCode == 32 && onGround) {
-    PressUp = 1;
+    PressUp = 5;
+    onGround = false;
   }
 });
 
@@ -121,6 +122,7 @@ document.addEventListener("keyup", (event) => {
   }
   if (event.keyCode == 32) {
     PressUp = 0;
+    onGround = true;
   }
 });
 
@@ -147,8 +149,17 @@ function update() {
   MouseX = MouseY = 0;
 
   pawn.x = pawn.x + dx;
-  pawn.y = pawn.y + dy;
+  if (pawn.y >= -100) {
+    pawn.y = pawn.y + dy;
+  }
+
   pawn.z = pawn.z + dz;
+
+  if (onGround) {
+    if (pawn.y !== 0) {
+      pawn.y = pawn.y + 1;
+    }
+  }
 
   if (lock) {
     pawn.rx = pawn.rx + drx;
