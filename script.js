@@ -10,11 +10,11 @@ function player(x,y,z,rx,ry) {
 }
 
 var map = [
-		   [0,0,1000,0,180,0,2000,200,"#F0C0FF"],
-		   [0,0,-1000,0,0,0,2000,200,"#F0C0FF"],
-		   [1000,0,0,0,-90,0,2000,200,"#F0C0FF"],
-		   [-1000,0,0,0,90,0,2000,200,"#F0C0FF"],
-		   [0,100,0,90,0,0,2000,2000,"#666666"]
+		   [0,0,1000,0,180,0,2000,600,"url('textures/1.jpg')", "ff0000"],
+		   [0,0,-1000,0,0,0,2000,600,"url('textures/1.jpg')", "ff0000"],
+		   [1000,0,0,0,-90,0,2000,600,"url('textures/1.jpg')", "ff0000"],
+		   [-1000,0,0,0,90,0,2000,600,"url('textures/1.jpg')", "ff0000"],
+		   [0,100,0,90,0,0,2000,2000,"url('textures/2.jpg')", "00ff00"]
 ]
 
 var PressBack = 0;
@@ -120,7 +120,15 @@ function CreateNewWorld(){
 		newElement.id = "square" + i;
 		newElement.style.width = map[i][6] + "px";
 		newElement.style.height = map[i][7] + "px";
-		newElement.style.background = map[i][8];
+		
+		if (!map[i][8] == null) {
+			newElement.style.background = map[i][9];
+		} else {
+			newElement.style.backgroundImage = map[i][8];
+		}
+		
+		console.log(map[i][8])
+		
 		newElement.style.transform = "translate3d(" +
 		(600 - map[i][6]/2 + map[i][0]) + "px," +
 		(400 - map[i][7]/2 + map[i][1]) + "px," +
