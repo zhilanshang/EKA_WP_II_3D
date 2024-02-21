@@ -32,7 +32,7 @@ var map = [
     size,
     size,
     null,
-    "#008000",
+    "#00FF00",
   ],
   // Front Face
   [xPosition, yPosition, zPosition - 50, 0, 0, 0, size, size, null, "#4d0000"],
