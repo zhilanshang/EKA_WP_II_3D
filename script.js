@@ -47,7 +47,7 @@ var map = [
     size,
     size,
     null,
-    "#FFFF00",
+    "#FFFFFF",
   ],
   // Right Face
   [xPosition + 50, yPosition, zPosition, 0, 90, 0, size, size, null, "#00FFFF"],
