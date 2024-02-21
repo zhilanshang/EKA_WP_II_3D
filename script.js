@@ -19,6 +19,10 @@ var map = [
   [1000, 0, 0, 0, -90, 0, 2000, 600, "url('textures/1.jpg')", "ff0000"],
   [-1000, 0, 0, 0, 90, 0, 2000, 600, "url('textures/1.jpg')", "ff0000"],
   [0, 100, 0, 90, 0, 0, 2000, 2000, "url('textures/2.jpg')", "00ff00"],
+  //Patric's wall
+  [500, 0, 580, 0, 0, 0, 1000, 600, "url('textures/1.jpg')", "ff0000"],
+  [500, 0, 600, 0, 0, 0, 1000, 600, "url('textures/1.jpg')", "ff0000"],
+  [0, 0, 590, 0, 90, 0, 20, 600, "url('textures/1.jpg')", "ff0000"],
   // Top Face
   [xPosition, yPosition - 50, zPosition, 90, 0, 0, size, size, null, "#FF0000"],
   // Bottom Face
