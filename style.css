@@ -15,6 +15,12 @@
 .square{
 	position:absolute;
 }
+
+.circle{
+	position: absolute;
+	border-radius: 25px;
+}
+
 #pawn{
 	display:none;
 	position:absolute;
