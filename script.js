@@ -62,7 +62,7 @@ var map = [
     size,
     size,
     null,
-    "#FF00FF",
+    "#0F7209",
   ],
 ];
 
