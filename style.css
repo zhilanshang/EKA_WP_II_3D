@@ -18,7 +18,14 @@
 
 .circle{
 	position: absolute;
-	border-radius: 25px;
+	border-radius: 25px;	
+}
+
+.triangle{
+	position: absolute;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid black;
 }
 
 #pawn{

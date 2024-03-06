@@ -1,9 +1,9 @@
 var items = [
     //[x, y, z, rx, ry, rz, radius, texture (null), coloor "#4d0000", form]
-    [-800,0,-800,0,90,0, 25, null, "yellow", "square1"],
+    [-800,0,-800,0,90,0, 25, null, "yellow", "square"],
     [800,0,-800,0,0,0, 25, null, "yellow", "circle"],
-    [-800,0,800,0,0,0, 25, null, "yellow", "circle"],
-    [800,0,800,0,0,0, 25, null, "yellow", "circle"]
+    [-800,0,800,0,0,0, 25, null, "yellow", "square"],
+    [800,0,800,0,0,0, 0, null, "yellow", "triangle"]
 ];
 
 function createItems(){
@@ -12,19 +12,38 @@ function createItems(){
         newElement.style.position = "absolute";
         if (items[i][9] == "circle") {
             newElement.className = "circle";
+            newElement.style.width = items[i][6]*2 + "px";
+            newElement.style.height = items[i][6]*2 + "px"; 
+            if (items[i][7] == null) {
+                newElement.style.background = items[i][8];
+              } else {
+                newElement.style.backgroundImage = items[i][7];
+            } 
+        } else if (items[i][9] == "square") {
+            newElement.className = "square";
+            newElement.style.width = items[i][6]*2 + "px";
+            newElement.style.height = items[i][6]*2 + "px";
+            if (items[i][7] == null) {
+                newElement.style.background = items[i][8];
+              } else {
+                newElement.style.backgroundImage = items[i][7];
+            }
+        } else if (items[i][9] == "triangle") {
+            newElement.className = "triangle";
+            newElement.style.width = 0;
+            newElement.style.height = 0;
+            if (items[i][7] == null) {
+                newElement.style.borderBottom = "50px solid " + items[i][8];
+              } else {
+                newElement.style.backgroundImage = items[i][7];
+            }
         }
-        //newElement.className = "circle";
-        newElement.id = "circle" + i;
-        newElement.style.width = items[i][6]*2 + "px";
-        newElement.style.height = items[i][6]*2 + "px";
+        newElement.id = "item" + i;
+        
 
         
 
-        if (items[i][7] == null) {
-            newElement.style.background = items[i][8];
-          } else {
-            newElement.style.backgroundImage = items[i][7];
-          }
+        
         
           newElement.style.transform =
           "translate3d(" +
