@@ -1,6 +1,8 @@
 var pi = 3.141592;
 var deg = pi / 180;
 
+var collectionSound = new Audio("/collect.mp3");
+
 function player(x, y, z, rx, ry) {
   this.x = x;
   this.y = y;
@@ -109,6 +111,18 @@ function update() {
     pawn.ry = pawn.ry + dry;
   }
 
+  items.forEach((item, index) => {
+    let dx = pawn.x - item[0];
+    let dy = pawn.y - item[1];
+    let dz = pawn.z - item[2];
+
+    let distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+    if (distance <= 8 * item[6]) {
+      collectItem(index);
+    }
+  });
+
   world.style.transform =
     "translateZ(" +
     (600 - 0) +
@@ -126,6 +140,16 @@ function update() {
     "px," +
     -pawn.z +
     "px)";
+}
+
+function collectItem(index) {
+  let itemElement = document.getElementById("item" + index);
+  if (itemElement) {
+    itemElement.parentNode.removeChild(itemElement);
+    collectionSound
+      .play()
+      .catch((error) => console.error("Sound playback failed", error));
+  }
 }
 
 CreateNewWorld();
