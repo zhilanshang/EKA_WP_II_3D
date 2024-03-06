@@ -3,7 +3,7 @@ var items = [
     [-800,0,-800,0,90,0, 25, null, "yellow", "square"],
     [800,0,-800,0,0,0, 25, null, "yellow", "circle"],
     [-800,-100,800,0,55,55, 25, null, "yellow", "star"],
-    [800,0,800,0,180,90, 90, null, "yellow", "triangle"]
+    [800,0,800,0,90,0, 0, null, "yellow", "triangle"]
 ];
 
 function createItems(){
