@@ -1,17 +1,30 @@
-<!DOCTYPE HTML>
-<HTML>
-<HEAD>
-	<TITLE>3D GAME</TITLE>
-	<LINK rel="stylesheet" href="style.css">
-	<meta charset="utf-8">
-</HEAD>
-<BODY>
-	<div id="container">
-		<div id="world"></div>
-		<div id="pawn"></div>
-	</div>
-</BODY>
-<!-- <script src="map.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D GAME</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="container">
+      <div
+        id="scoreBoard"
+        style="
+          position: absolute;
+          top: 0;
+          z-index: 10;
+          color: red;
+          font-size: 24px;
+        "
+      >
+        Collected Items: 0/0
+      </div>
+
+      <div id="world"></div>
+      <div id="pawn"></div>
+    </div>
+  </body>
+  <!-- <script src="map.js"></script>
 <script src="script.js"></script> -->
-</HTML>
+</html>
 <script type="text/javascript" src="master.js"></script>

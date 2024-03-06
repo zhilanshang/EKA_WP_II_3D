@@ -1,6 +1,6 @@
 var pi = 3.141592;
 var deg = pi / 180;
-
+var collectedItemCount = 0;
 var collectionSound = new Audio("/collect.mp3");
 
 function player(x, y, z, rx, ry) {
@@ -117,7 +117,8 @@ function update() {
     let dz = pawn.z - item[2];
 
     let distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
-
+    document.getElementById("scoreBoard").innerText =
+      "Collected Items: " + collectedItemCount + "/" + items.length;
     if (distance <= 8 * item[6]) {
       collectItem(index);
     }
@@ -149,6 +150,8 @@ function collectItem(index) {
     collectionSound
       .play()
       .catch((error) => console.error("Sound playback failed", error));
+
+    collectedItemCount++;
   }
 }
 
