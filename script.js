@@ -1,7 +1,7 @@
 var pi = 3.141592;
 var deg = pi / 180;
 var collectedItemCount = 0;
-var collectionSound = new Audio("/collect.mp3");
+var collectionSound = new Audio("collect.mp3");
 
 function player(x, y, z, rx, ry) {
   this.x = x;
