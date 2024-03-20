@@ -155,6 +155,7 @@ function collectItem(index) {
   }
 }
 
-CreateNewWorld(map);
+CreateNewWorld(mapMikhail);
 createItems();
 TimerGame = setInterval(update, 10);
+
