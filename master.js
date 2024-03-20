@@ -11,6 +11,11 @@ function include(file) {
 
 /* Include Many js files */
 include('mapAbdul.js');
+include("mapThisara.js");
+include('mapAdheeksha.js');
+include('mikhail-map.js');
 include('map.js');
 include('items.js');
 include('script.js');
+
+
