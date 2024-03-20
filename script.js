@@ -3,6 +3,9 @@ var deg = pi / 180;
 var collectedItemCount = 0;
 var collectionSound = new Audio("collect.mp3");
 
+//maps available = mapMikhail, mapAdheeksha, map
+var currentMap = mapMikhail;
+
 function player(x, y, z, rx, ry) {
   this.x = x;
   this.y = y;
@@ -93,7 +96,7 @@ function update() {
 
   MouseX = MouseY = 0;
 
-  collision(mapMikhail);
+  collision(currentMap);
 
   pawn.x = pawn.x + dx;
   if (pawn.y >= -100) {
@@ -230,6 +233,6 @@ function coorReTransform(x3, y3, z3, rxc, ryc, rzc){
   return [x0, y0, z0];
 }
 
-CreateNewWorld(mapMikhail);
+CreateNewWorld(currentMap);
 createItems();
 TimerGame = setInterval(update, 10);
