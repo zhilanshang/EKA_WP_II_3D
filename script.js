@@ -162,7 +162,7 @@ function collectItem(index) {
 
 function collision(mapObj) {
 
- onGround = false;
+//  onGround = false;
 
   for(let i=0; i<mapObj.length; i++){
     //let's get the coordinates of the player in the system of coordinates of each rectangle
