@@ -230,6 +230,6 @@ function coorReTransform(x3, y3, z3, rxc, ryc, rzc){
   return [x0, y0, z0];
 }
 
-CreateNewWorld(mapMikhail);
+CreateNewWorld(mapAdheeksha);
 createItems();
 TimerGame = setInterval(update, 10);
