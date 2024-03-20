@@ -28,51 +28,51 @@ var map = [
     [-500, 0, -600, 0, 0, 0, 1000, 600, "url('textures/1.jpg')", "ff0000"],
     [0, 0, -590, 0, 90, 0, 20, 600, "url('textures/1.jpg')", "ff0000"],
   
-    // Top Face
-    [xPosition, yPosition - 50, zPosition, 90, 0, 0, size, size, null, "#FF0000"],
-    // Bottom Face
-    [
-      xPosition,
-      yPosition + 50,
-      zPosition,
-      -90,
-      0,
-      0,
-      size,
-      size,
-      null,
-      "#00FF00",
-    ],
-    // Front Face
-    [xPosition, yPosition, zPosition - 50, 0, 0, 0, size, size, null, "#4d0000"],
-    // Back Face
-    [
-      xPosition,
-      yPosition,
-      zPosition + 50,
-      0,
-      180,
-      0,
-      size,
-      size,
-      null,
-      "#FFFFFF",
-    ],
-    // Right Face
-    [xPosition + 50, yPosition, zPosition, 0, 90, 0, size, size, null, "#00FFFF"],
-    // Left Face
-    [
-      xPosition - 50,
-      yPosition,
-      zPosition,
-      0,
-      -90,
-      0,
-      size,
-      size,
-      null,
-      "#0F7209",
-    ],
+    // // Top Face
+    // [xPosition, yPosition - 50, zPosition, 90, 0, 0, size, size, null, "#FF0000"],
+    // // Bottom Face
+    // [
+    //   xPosition,
+    //   yPosition + 50,
+    //   zPosition,
+    //   -90,
+    //   0,
+    //   0,
+    //   size,
+    //   size,
+    //   null,
+    //   "#00FF00",
+    // ],
+    // // Front Face
+    // [xPosition, yPosition, zPosition - 50, 0, 0, 0, size, size, null, "#4d0000"],
+    // // Back Face
+    // [
+    //   xPosition,
+    //   yPosition,
+    //   zPosition + 50,
+    //   0,
+    //   180,
+    //   0,
+    //   size,
+    //   size,
+    //   null,
+    //   "#FFFFFF",
+    // ],
+    // // Right Face
+    // [xPosition + 50, yPosition, zPosition, 0, 90, 0, size, size, null, "#00FFFF"],
+    // // Left Face
+    // [
+    //   xPosition - 50,
+    //   yPosition,
+    //   zPosition,
+    //   0,
+    //   -90,
+    //   0,
+    //   size,
+    //   size,
+    //   null,
+    //   "#0F7209",
+    // ],
   ];
 
   function CreateNewWorld(myMap) {
