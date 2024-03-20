@@ -1,9 +1,9 @@
 var items = [
   //[x, y, z, rx, ry, rz, radius, texture (null), coloor "#4d0000", form]
-  [-800, 0, -800, 0, 90, 0, 25, null, "yellow", "square"],
-  [800, 0, -800, 0, 0, 0, 25, null, "yellow", "circle"],
-  [-800, -100, 800, 0, 55, 55, 25, null, "yellow", "star"],
-  [800, 0, 800, 0, 0, 0, 25, null, "yellow", "triangle"],
+  [-1200, 0, -1200, 0, 90, 0, 25, null, "yellow", "square"],
+  [1200, 0, -1200, 0, 0, 0, 25, null, "yellow", "circle"],
+  [-1200, -150, 1200, 0, 55, 55, 25, null, "yellow", "star"],
+  [1200, 0, 1200, 0, 0, 0, 25, null, "yellow", "triangle"],
 ];
 
 function createItems() {

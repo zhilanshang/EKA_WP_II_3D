@@ -155,6 +155,6 @@ function collectItem(index) {
   }
 }
 
-CreateNewWorld(map);
+CreateNewWorld(mapAdheeksha);
 createItems();
 TimerGame = setInterval(update, 10);
