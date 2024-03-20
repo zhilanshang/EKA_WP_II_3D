@@ -4,7 +4,7 @@ var collectedItemCount = 0;
 var collectionSound = new Audio("collect.mp3");
 
 //maps available = mapMikhail, mapAdheeksha, map
-var currentMap = mapMikhail;
+var currentMap = mapAdheeksha;
 
 function player(x, y, z, rx, ry) {
   this.x = x;
