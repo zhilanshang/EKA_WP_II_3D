@@ -68,6 +68,19 @@
   content: "";
 }
 
+.infoPanel {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  top: 0;
+  z-index: 10;
+  color: rgb(0, 255, 213);
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
 #pawn {
   /* display:none; */
   position: absolute;
@@ -78,11 +91,4 @@
   border-radius: 20px;
   width: 20px;
   height: 20px;
-}
-
-#scoreBoard {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
 }
