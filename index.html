@@ -7,18 +7,12 @@
   </head>
   <body>
     <div id="container">
-      <div
-        id="scoreBoard"
-        style="
-          position: absolute;
-          top: 0;
-          z-index: 10;
-          color: red;
-          font-size: 24px;
-        "
-      >
-        Collected Items: 0/0
-      </div>
+      <div style="display: flex;">
+        <div id="scoreBoard" class="infoPanel">Collected Items: 0/0</div>
+        <div id="instructionBoard" class="infoPanel"></div>
+
+    </div>
+      
 
       <div id="world"></div>
       <div id="pawn"></div>
