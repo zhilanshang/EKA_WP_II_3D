@@ -244,5 +244,5 @@ function coorReTransform(x3, y3, z3, rxc, ryc, rzc){
 }
 
 CreateNewWorld(currentMap);
-createItems();
+createItems(items);
 TimerGame = setInterval(update, 10);

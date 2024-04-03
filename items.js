@@ -6,70 +6,76 @@ var items = [
   [800, 0, 800, 0, 0, 0, 25, null, "yellow", "triangle"],
 ];
 
-function createItems() {
-  for (let i = 0; i < items.length; i++) {
+var itemsZhilan = [
+  [-500,0,-450,0,90,0,30, null, "#990066", "circle"],
+  [500,-50,0,0,0,30,40, null, "#990066", "triangle"],
+  [500,0,100,0,0,0,25, null, "#990066", "square"],
+];
+
+function createItems(myItems) {
+  for (let i = 0; i < myItems.length; i++) {
     let newElement = document.createElement("div");
     newElement.style.position = "absolute";
-    if (items[i][9] == "circle") {
+    if (myItems[i][9] == "circle") {
       newElement.className = "circle";
-      newElement.style.width = items[i][6] * 2 + "px";
-      newElement.style.height = items[i][6] * 2 + "px";
-      if (items[i][7] == null) {
-        newElement.style.background = items[i][8];
+      newElement.style.width = myItems[i][6] * 2 + "px";
+      newElement.style.height = myItems[i][6] * 2 + "px";
+      if (myItems[i][7] == null) {
+        newElement.style.background = myItems[i][8];
       } else {
-        newElement.style.backgroundImage = items[i][7];
+        newElement.style.backgroundImage = myItems[i][7];
       }
-    } else if (items[i][9] == "square") {
+    } else if (myItems[i][9] == "square") {
       newElement.className = "square";
-      newElement.style.width = items[i][6] * 2 + "px";
-      newElement.style.height = items[i][6] * 2 + "px";
-      if (items[i][7] == null) {
-        newElement.style.background = items[i][8];
+      newElement.style.width = myItems[i][6] * 2 + "px";
+      newElement.style.height = myItems[i][6] * 2 + "px";
+      if (myItems[i][7] == null) {
+        newElement.style.background = myItems[i][8];
       } else {
-        newElement.style.backgroundImage = items[i][7];
+        newElement.style.backgroundImage = myItems[i][7];
       }
-    } else if (items[i][9] == "triangle") {
+    } else if (myItems[i][9] == "triangle") {
       newElement.className = "triangle";
       newElement.style.width = 0;
       newElement.style.height = 0;
-      if (items[i][7] == null) {
-        newElement.style.borderBottom = "50px solid " + items[i][8];
+      if (myItems[i][7] == null) {
+        newElement.style.borderBottom = "50px solid " + myItems[i][8];
       } else {
-        newElement.style.backgroundImage = items[i][7];
+        newElement.style.backgroundImage = myItems[i][7];
       }
-      if (items[i][9] == null) {
-        newElement.style.background = items[i][8];
+      if (myItems[i][9] == null) {
+        newElement.style.background = myItems[i][8];
       } else {
-        newElement.style.backgroundImage = items[i][7];
+        newElement.style.backgroundImage = myItems[i][7];
       }
-    } else if (items[i][9] == "star") {
+    } else if (myItems[i][9] == "star") {
       newElement.className = "star";
       newElement.style.width = 0;
       newElement.style.height = 0;
-      if (items[i][7] == null) {
-        newElement.style.borderBottom = "50px solid" + items[i][8];
+      if (myItems[i][7] == null) {
+        newElement.style.borderBottom = "50px solid" + myItems[i][8];
       } else {
-        newElement.style.backgroundImage = items[i][7];
+        newElement.style.backgroundImage = myItems[i][7];
       }
     }
     newElement.id = "item" + i;
 
     newElement.style.transform =
       "translate3d(" +
-      (600 - items[i][6] + items[i][0]) +
+      (600 - myItems[i][6] + myItems[i][0]) +
       "px," +
-      (400 - items[i][7] + items[i][1]) +
+      (400 - myItems[i][7] + myItems[i][1]) +
       "px," +
-      items[i][2] +
+      myItems[i][2] +
       "px)" +
       "rotateX(" +
-      items[i][3] +
+      myItems[i][3] +
       "deg)" +
       "rotateY(" +
-      items[i][4] +
+      myItems[i][4] +
       "deg)" +
       "rotateZ(" +
-      items[i][5] +
+      myItems[i][5] +
       "deg)";
 
     world.append(newElement);
