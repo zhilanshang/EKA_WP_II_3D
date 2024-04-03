@@ -14,7 +14,7 @@ var maps = [
   mapZhilan, //level 6
 ]; 
 //var currentMap = maps[Math.floor(Math.random() * maps.length)];
-var currentMap = maps[0];
+var currentMap = maps[6];
 
 function player(x, y, z, rx, ry) {
   this.x = x;

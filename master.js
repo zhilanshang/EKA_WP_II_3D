@@ -10,6 +10,7 @@ function include(file) {
 }
 
 /* Include Many js files */
+include('maps/mapZhilan.js');
 include('maps/mapAltishka.js');
 include('maps/mapAbdul.js');
 include("maps/mapThisara.js");
