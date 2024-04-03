@@ -4,7 +4,16 @@ var collectedItemCount = 0;
 var collectionSound = new Audio("collect.mp3");
 
 //maps available = mapMikhail, mapAdheeksha, map
-var currentMap = mapAdheeksha;
+var maps = [
+  map, //level 0
+  mapAbdul, //level 1
+  mapAdheeksha, //level 2
+  mapAltishka, //level 3
+  mapThisara, //level 4
+  mapMikhail, //level 5
+]; 
+//var currentMap = maps[Math.floor(Math.random() * maps.length)];
+var currentMap = maps[0];
 
 function player(x, y, z, rx, ry) {
   this.x = x;
