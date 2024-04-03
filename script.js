@@ -2,6 +2,7 @@ var pi = 3.141592;
 var deg = pi / 180;
 var collectedItemCount = 0;
 var collectionSound = new Audio("collect.mp3");
+var collectAll = new Audio("level Won.mp3");
 
 //maps available = mapMikhail, mapAdheeksha, map
 var maps = [
@@ -126,7 +127,8 @@ function update() {
     pawn.ry = pawn.ry + dry;
   }
 
-  items.forEach((item, index) => {
+  if(collectedItemCount != items.length){
+    items.forEach((item, index) => {
     let dx = pawn.x - item[0];
     let dy = pawn.y - item[1];
     let dz = pawn.z - item[2];
@@ -137,11 +139,16 @@ function update() {
     if(collectedItemCount == items.length){
       document.getElementById("instructionBoard").innerText = 
       "All the items are collected and go to the teleport";
+      collectAll
+      .play()
+      .catch((error) => console.error("Sound playback failed", error));
     }
     if (distance <= 8 * item[6]) {
       collectItem(index);
     }
   });
+  }
+  
 
   world.style.transform =
     "translateZ(" +
