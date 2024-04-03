@@ -11,6 +11,7 @@ var maps = [
   mapAltishka, //level 3
   mapThisara, //level 4
   mapMikhail, //level 5
+  mapZhilan, //level 6
 ]; 
 //var currentMap = maps[Math.floor(Math.random() * maps.length)];
 var currentMap = maps[0];
