@@ -133,6 +133,10 @@ function update() {
     let distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
     document.getElementById("scoreBoard").innerText =
       "Collected Items: " + collectedItemCount + "/" + items.length;
+    if(collectedItemCount == items.length){
+      document.getElementById("instructionBoard").innerText = 
+      "All the items are collected and go to the teleport";
+    }
     if (distance <= 8 * item[6]) {
       collectItem(index);
     }
